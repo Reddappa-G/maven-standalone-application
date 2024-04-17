@@ -18,9 +18,9 @@
 	<description>Maven Standalone Application</description>
 
 	<properties>
-		<sonar.host.url>http://35.154.242.68:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>admin</sonar.password>
+		<sonar.host.url>http://172.31.37.38:9000/</sonar.host.url>
+		<sonar.login>squ_b1ddbb3d4d057120e993da86f9dbe444d8e431d9</sonar.login>
+		<!-- <sonar.password>admin</sonar.password> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
                 <maven.compiler.target>11</maven.compiler.target>
@@ -36,6 +36,21 @@
 		</dependency>
 
 	</dependencies>
+	<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Releases Nexus Repository</name>
+	      <url>http://172.31.11.94:8081/repository/maven_standalone_app_release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Snapshot Nexus Repository </name>
+	      <url>http://172.31.11.94:8081/repository/maven_standalone_app_snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
